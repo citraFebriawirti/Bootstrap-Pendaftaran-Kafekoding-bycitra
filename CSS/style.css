@@ -1,0 +1,67 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&family=Pacifico&family=Poppins:wght@200;300;400;500&family=Quicksand:wght@500;600;700&family=Viga&display=swap');
+* {
+    box-sizing: border-box;
+}
+
+body {
+    background: cadetblue;
+    font-family: open sans;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    margin: 0;
+}
+
+.container {
+    background-color: white;
+    border-radius: 5px;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    width: 400px;
+}
+
+h1,
+h3 {
+    text-align: center;
+}
+
+h1 {
+    font-size: 20px;
+}
+
+h3 {
+    font-size: 15px;
+}
+
+.form {
+    padding: 20px 30px;
+}
+
+.form a {
+    background-color: #3498db;
+    padding: 10px;
+    margin-top: 10px;
+    border: 2px solid#3498db;
+    cursor: pointer;
+    border-radius: 5px;
+    color: white;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+/* responsive */
+
+@media screen and (max-width: 480px) {
+    #hero {
+        width: 300px;
+        height: 400px;
+        margin-top: 100px;
+    }
+    .continiu {
+        margin-left: 10px;
+        bottom: 20px;
+    }
+}
