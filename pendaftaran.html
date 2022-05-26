@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/css/style1.css" />
+    <title>Pendaftaran</title>
+</head>
+
+<body>
+    <div class="container">
+        <form action="" class="form" name="pendaftaran-kafekoding">
+            <h1>Pendaftaran Peserta Baru</h1>
+            <div class="form-control">
+                <label for="username">Nama</label>
+                <input type="text" placeholder="Masukkan username" name="nama" />
+            </div>
+            <div class="form-control">
+                <label for="username">NoBP</label>
+                <input type="text" placeholder="Masukkan username" name="nobp" />
+            </div>
+            <div class="form-control">
+                <label for="">Pilihan Kelas Pagi:</label>
+                <select name="" id="" name="pilihan kelas pagi">
+            <option value="">*------*</option>
+            <option value="">Database (08.00-10.00)</option>
+            <option value="">Desaign Grapis (08.00-10.00)</option>
+          </select>
+            </div>
+            <div class="form-control">
+                <label for="">Pilihan Kelas Siang:</label>
+                <select name="" id="" name="pilihan kelas siang">
+            <option value="">*------*</option>
+            <option value="">Javascript (10.00-12.00)</option>
+            <option value="">Desaign Grapis (10.00-12.00)</option>
+          </select>
+            </div>
+            <div class="form-control">
+                <label for="">Pilihan Kelas Sore:</label>
+                <select name="" id="" name="pilihan kelas sore">
+            <option value="">*------*</option>
+            <option value="">PHP (13.00-15.00)</option>
+            <option value="">Python (13.00-15.00)</option>
+          </select>
+            </div>
+            <button type="submit " onclick="window.alert('Terima Kasih')">Kirim</button>
+        </form>
+    </div>
+
+    <script>
+        const scriptURL = 'https://script.google.com/macros/s/AKfycbzFozpT_JCBgAv5AGscTDem0S090_RaSPfeouh_bWzAWsf4dmswRRy8nT75ZfNxdd2QGA/exec';
+        const form = document.forms['pendaftaran-kafekoding'];
+
+        form.addEventListener('submit', (e) => {
+            e.preventDefault();
+            fetch(scriptURL, {
+                    method: 'POST',
+                    body: new FormData(form),
+                })
+                .then((response) => console.log('Success!', response))
+                .catch((error) => console.error('Error!', error.message));
+        });
+    </script>
+</body>
+
+</html>
